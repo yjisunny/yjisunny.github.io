@@ -1,0 +1,252 @@
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PyeongChangPeace-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'NanumSquareRound';
+  font-weight: bold;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--sub-color);
+}
+
+:root {
+  --main-color: #ffca1b;
+  --sub-color: #3f3f3f;
+  --bg-color: #fff;
+}
+
+input {
+  height: 40px;
+  padding: 10px;
+  border: 1px solid var(--sub-color);
+  border-radius: 10px;
+}
+
+input:focus {outline: none;}
+input[type="submit"] {cursor: pointer; background-color: var(--main-color);}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 2.5fr 2.5fr;
+  grid-template-columns: 2fr 2.8fr 1.2fr;
+}
+
+.hidden { 
+  display: none;
+}
+
+.todo {
+  background-color: var(--main-color);
+  grid-row: span 3;
+  overflow-y: scroll;
+}
+
+.todo h2 {
+  background-color: var(--sub-color);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 200px;
+  font-size: 1.7rem;
+  margin: 30px auto;
+}
+
+.todo_header {
+  width: 31vw;
+  position: fixed;
+  background-color: var(--main-color);
+  text-align: center;
+}
+
+.todo ul {
+  width: 90%;
+}
+
+.todo::-webkit-scrollbar {
+  width: 40px;  /* 스크롤바의 너비 */
+}
+
+.todo::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #ffde73;   /* 스크롤바의 색상*/
+  border-radius: 30px;
+  background-clip: padding-box;
+  border: 8px solid transparent;
+}
+
+.todo::-webkit-scrollbar-track {
+  background: var(--main-color);  /*스크롤바 뒷 배경 색상*/
+}
+
+.todo input {
+  width: 90%;
+}
+
+.todo button {
+  border: 0;
+  box-shadow: 2px 2px #ce9e00;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  background-color: #ffdc67;
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#todo-list {
+  padding-top: 300px;
+  line-height: 40px;
+  list-style: square;
+}
+
+.header {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  white-space: nowrap;
+}
+
+.login, .clock {
+  background-color: var(--bg-color);
+}
+
+.login input:first-child{
+  width: 300px;
+}
+
+#greeting {
+  font-family: 'Cafe24Ssurround';
+  font-size: 2.5rem;
+}
+
+#clock {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.clock {
+  text-align: right;
+}
+
+.left {
+  background-color: var(--sub-color);
+  grid-row: span 2;
+}
+
+#quote {
+  width: 100%;
+}
+
+.cover {
+  margin: 0 auto;
+  width: 85%;
+  height: 60%;
+  margin-top: 7%;
+  position: relative;
+  z-index: 2;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 5px 0px var(--sub-color);
+  border-radius: 20px 20px 0px 0px;
+}
+.quote {
+  margin: 0 auto;
+  background-color: #fff9eb;
+  width: 84%;
+  height: 24%;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 1;
+  animation: slidein 1.7s ease-out;
+}
+.quote p {
+  margin: 0;
+}
+
+.quote p:nth-child(1) {
+  padding: 25px 25px 15px;
+  font-size: 1.1rem;
+}
+
+.quote p:nth-child(2) {
+  text-align: center;
+  font-size: 1rem;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+#dday {
+  background-color: var(--sub-color);
+  color: #fff;
+  padding: 20% 0 0 0;
+  text-align: center;
+}
+
+#dday input {
+  width: 80%;
+}
+
+#ddayClock {
+  text-align: center;
+}
+
+#ddayClock span:nth-child(1) {
+  font-size: 1.5rem;
+}
+
+#ddayClock span:nth-child(2) {
+  font-family: 'PyeongChangPeace-Bold';
+  font-size: 2.5rem;
+  line-height: 6rem;
+}
+
+#weather {
+  background-color: var(--sub-color);
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+#weather img {
+  width: 60%;
+  filter: invert(87%) sepia(16%) saturate(4336%) hue-rotate(342deg) brightness(106%) contrast(101%);
+}

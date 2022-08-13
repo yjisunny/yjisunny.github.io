@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="todo">
+      <div class="todo_header">
+        <h2>To-Do List</h2>
+        <form id="todo-form">
+          <input type="text" placeholder="내용을 입력 후 엔터를 누르세요." maxlength="100" required />
+        </form>
+      </div>
+      <ul id="todo-list"></ul>
+    </div>
+    <div class="header">
+      <div class="login">
+        <form id="login-form" class="hidden">
+          <input type="text" placeholder="화면에 보여질 닉네임을 입력하세요." required maxlength="13">
+          <input type="submit" value="저장">
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+      </div>
+      <div class="clock">
+        <span id="clock">0000-00-00<br>00:00:00</span>
+      </div>
+    </div>
+    <div id="quote" class="left">
+      <div class="cover"></div>
+      <div class="quote">
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div id="dday" class="right">
+      <form id="dday-form" class="hidden">
+        <input type="text" placeholder="디데이 이름을 입력하세요." required maxlength="10">
+        <input type="text" placeholder="yyyy-mm-dd 날짜를 입력하세요." required maxlength="10">
+        <br>
+        <input type="submit" value="저장">
+      </form>
+      <p id="ddayClock" class="hidden">
+        <span></span>
+        <span></span>
+      </p>
+    </div>
+    <div id="weather" class="right">
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+  <script src="js/paintings.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/background.js"></script>
+</body>
+</html>
